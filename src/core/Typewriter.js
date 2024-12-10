@@ -575,13 +575,13 @@ class Typewriter {
           textNodeToUse = this.options.onCreateTextNode(character, textNode)
         }
 
-        if(textNodeToUse) {
-          if(node) {
-            node.appendChild(textNodeToUse);
-          } else {
-            this.state.elements.wrapper.appendChild(textNodeToUse);
-          }
-        }
+       if (textNodeToUse) {
+  if (node) {
+    node.innerHTML += character;
+  } else {
+    _this.state.elements.wrapper.innerHTML += character
+  }
+}
 
         this.state.visibleNodes = [
           ...this.state.visibleNodes,
